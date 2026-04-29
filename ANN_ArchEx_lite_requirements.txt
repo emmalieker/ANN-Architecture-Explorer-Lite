@@ -1,0 +1,11 @@
+# ANN Architecture Explorer — Lite
+# Dependencies extracted from ANN_Architecture_Explorer_lite.ipynb
+
+torch
+numpy
+pandas
+matplotlib
+scikit-learn
+scipy
+ipykernel
+ipywidgets
