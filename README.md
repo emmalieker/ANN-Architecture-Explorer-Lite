@@ -1,15 +1,14 @@
 # ANN Architecture Explorer — Lite
 
-A lightweight, interactive Jupyter notebook for comparing neural network architectures and hyperparameters side by side in an interactive dashboard. It’s designed for quick experimentation and visualization of how different ANN configurations perform on the same dataset.
+A lightweight, interactive Jupyter notebook for comparing neural network architectures and hyperparameters side by side in an interactive dashboard. It's designed for quick experimentation and visualization of how different ANN configurations perform on the same dataset.
 
 You can:
-- **run the notebook directly** without making any changes (sample datasets and configurations are included) or
-- **customize it** by loading your own dataset and defining your own ANN configurations with the provided template and parameter reference. Cells in which you can make changes are clearly marked with comments. The rest of the notebook is ready to run as-is, with no code changes needed beyond defining your dataset and configs
+- **Run the notebook directly** without making any changes (sample datasets and configurations are included)
+  or
+- **Customize it** by loading your own dataset and defining your own ANN configurations with the provided template and parameter reference. Cells in which you can make changes are clearly marked with comments. The rest of the notebook is ready to run as-is, with no code changes needed beyond defining your dataset and configs
 
 
-https://github.com/user-attachments/assets/placeholder-for-demo-video
-
-> *Replace the link above with your uploaded `ANN_ArchEx_lite_DemoRec01.mov` after pushing to GitHub.*
+https://github.com/user-attachments/assets/d7fbb53d-af14-4d5e-91e8-0b51ffcd9d10
 
 ---
 
@@ -69,33 +68,30 @@ Five plot views are available, selectable via widget toggles:
 You can compare all configs against each other at once including train, dev and test performance, or filter to specific configs and toggle between train/dev curves for a cleaner view of training dynamics:
 
 <p align="center">
-  <img src="DemoScreenshots/Wine_DemoShot01.png" width="90%" alt="Wine Quality dataset — all five views displayed simultaneously">
+  <img src="DemoFiles/Wine_DemoShot01.png" width="90%" alt="Wine Quality dataset () binary— all five views displayed simultaneously">
 </p>
 <p align="center"><i>Wine Quality dataset (binary) — all five interactive views displayed at once. Side scroll to view all</i></p>
 
 <p align="center">
-  <img src="DemoScreenshots/Iris_DemoShot01.png" width="60%" alt="Iris — comparing two configs with loss curves">
+  <img src="DemoFiles/Iris_DemoShot01.png" width="45%" alt="Iris (multiclass) — comparing two configs with loss curves">
+  <img src="DemoFiles/Auto_DemoShot03.png" width="45%" alt="Auto MPG (regression) — comparing two configs with loss curves">
 </p>
-<p align="center"><i>Iris dataset (multiclass) - Filtering to compare SGD+Momentum vs. Tanh (no regularization) training loss without dev loss curves</i></p>
+<p align="center"><i>Comparing toggle options. <br>Left: Iris dataset (multiclass) - Filtering to compare SGD+Momentum vs. Tanh (no regularization) training loss without dev loss curves · <br>Right: Auto MPG dataset (regression) - Comparing Final accuracy for train, dev and test sets across all configurations</i></p>
 
-<p align="center">
-  <img src="DemoScreenshots/Auto_DemoShot03.png" width="60%" alt="Auto MPG — comparing two configs with loss curves">
-</p>
-<p align="center"><i>Auto MPG dataset (regression) - Comparing Final accuracy for train, dev and test sets across all configurations</i></p>
 
 The smoothing slider helps read noisy training curves, especially useful for regression and small datasets:
 
 <p align="center">
-  <img src="DemoScreenshots/Auto_mpg_DemoShot04.png" width="45%" alt="Auto MPG — raw curves">
-  <img src="DemoScreenshots/Auto_mpg_DemoShot05.png" width="45%" alt="Auto MPG — smoothed curves">
+  <img src="DemoFiles/Auto_DemoShot04.png" width="45%" alt="Auto MPG — raw curves">
+  <img src="DemoFiles/Auto_DemoShot05.png" width="45%" alt="Auto MPG — smoothed curves">
 </p>
-<p align="center"><i>Comparing training and dev loss for SGD+Momentum vs. Tanh (no regularization). Left: raw R² curves (smoothing=1) · Right: smoothed (smoothing=4)</i></p>
+<p align="center"><i>Comparing training and dev loss for SGD+Momentum vs. Tanh (no regularization). <br>Left: raw R² curves (smoothing=1) · <br>Right: smoothed (smoothing=4)</i></p>
 
 <p align="center">
-  <img src="DemoScreenshots/Auto_mpg_DemoShot01.png" width="45%" alt="Auto MPG — raw curves">
-  <img src="DemoScreenshots/Auto_mpg_DemoShot02.png" width="45%" alt="Auto MPG — smoothed curves">
+  <img src="DemoFiles/Auto_DemoShot01.png" width="45%" alt="Auto MPG — raw curves">
+  <img src="DemoFiles/Auto_DemoShot02.png" width="45%" alt="Auto MPG — smoothed curves">
 </p>
-<p align="center"><i>Comparing training and dev loss for all configurations. Left: raw R² curves (smoothing=1) · Right: smoothed (smoothing=4)</i></p>
+<p align="center"><i>Comparing training and dev loss for all configurations. <br>Left: raw R² curves (smoothing=1) · <br>Right: smoothed (smoothing=4)</i></p>
 
 
 ### Summary Table
@@ -103,7 +99,7 @@ The smoothing slider helps read noisy training curves, especially useful for reg
 After training, a summary table with automatic diagnostic labels is generated — flagging overfitting, underfitting, generalization quality, and relative speed.
 
 <p align="center">
-  <img src="DemoScreenshots/Auto_mpg_DemoShot06.png" width="60%" alt="Auto MPG — Performance summary table with diagnostic labels">
+  <img src="DemoFiles/Auto_DemoSum01.png" width="100%" alt="Auto MPG — Performance summary table with diagnostic labels">
 </p>
 <p align="center"><i>Auto MPG — final performance summary table with diagnostic labels for each configuration</i></p>
 
@@ -181,8 +177,8 @@ Alternatively, enable k-fold cross-validation for small datasets (`use_kfold=Tru
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/ANN_ArchEx_lite.git
-cd ANN_ArchEx_lite
+git clone https://github.com/emmalieker/ANN-Architecture-Explorer-Lite.git
+cd ANN-Architecture-Explorer-Lite
 
 # Create a virtual environment (recommended)
 python -m venv .venv
@@ -215,16 +211,16 @@ jupyter notebook ANN_ArchEx_lite.ipynb
 ANN_ArchEx_lite/
 ├── ANN_ArchEx_lite.ipynb                 # Main notebook
 ├── ANN_ArchEx_lite_requirements.txt      # pip dependencies
-├── Demo/                                 # Screenshots and video used in this README
-│   ├── Auto_DemoRec01.mov                # Demo video
+├── DemoFiles/                            # Screenshots and video used in this README
+│   ├── Auto_DemoRec01.mp4                # Demo video
 │   ├── Auto_DemoShot01.png               # Interactive plot
 │   ├── Auto_DemoShot02.png               # Interactive plot
 │   ├── Auto_DemoShot03.png               # Interactive plot
 │   ├── Auto_DemoShot04.png               # Interactive plot
 │   ├── Auto_DemoShot05.png               # Interactive plot
-│   └── Auto_DemoSum01.png                # Final performance summary table with diagnostic labels
+│   ├── Auto_DemoSum01.png                # Final performance summary table with diagnostic labels
 │   ├── Iris_DemoShot01.png               # Interactive plot
-│   ├── Wine_DemoShot01.png               # Interactive plot
+│   └── Wine_DemoShot01.png               # Interactive plot
 └── README.md
 ```
 
